@@ -1,6 +1,5 @@
 import About from "./components/about";
 import Footer from "./components/footer";
-import GettingHere from "./components/getting-here";
 import ImageGallery from "./components/imageGallery";
 import Header from "./components/header";
 import Notice from "./components/notice";

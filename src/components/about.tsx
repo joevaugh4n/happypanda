@@ -1,4 +1,3 @@
-import CTA from "./cta";
 import Link from "../atoms/link";
 import strawberries from "/assets/strawberries.webp";
 import GettingHere from "./getting-here";
