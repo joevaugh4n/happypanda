@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply md:text-8xl text-6xl text-white font-bold tracking-widest max-w-[6ch] mb-4;
+  }
+
+  h2 {
+    @apply md:text-6xl text-4xl text-balance md:pb-6 pb-4 font-bold text-kfk-red ;
+  }
+
+  h3 {
+    @apply md:text-4xl text-2xl text-balance md:pb-6 pb-2 font-bold text-kfk-red;
+  }
+
+  p,
+  li {
+    @apply md:text-xl text-lg pb-2 text-pretty;
+  }
+
+  li>.list-label {
+    @apply font-medium
+  }
+
+  .button-label {
+    @apply md:text-2xl text-xl;
+  }
+
+  p.quote {
+    @apply md:text-2xl text-xl italic;
+  }
+
+  p.subheading {
+    @apply md:text-4xl text-2xl font-bold text-white text-balance capitalize w-3/4;
+  }
+
+  .margin {
+    @apply lg:px-44 px-4
+  }
+
+  a {
+    @apply font-medium
+  }
+}
