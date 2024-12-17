@@ -1,21 +1,22 @@
-import Button from "../atoms/button"
+import Button from "../atoms/button";
+import logo from "/assets/logo.png";
 
-interface Props {
-    title: string;
-    subheading: string;
-}
-
-export default function Header({ title, subheading }: Props) {
-    return (
-        <header className='relative pt-16 bg-header-bg bg-cover border-blue-300 border-b-4 h-[80vh] w-screen'>
-            <div className='absolute inset-0 bg-gradient-to-b from-black/75 to-transparent'></div>
-            <section className='relative z-10 flex md:flex-row flex-col md:gap0 gap-4 justify-between items-start md:px-12 px-6'>
-                <section>
-                    <h1>{title}</h1>
-                    <p className='subheading'>{subheading}</p>
-                </section>
-                <Button caption='Reservations' link='test' />
-            </section>
-        </header>
-    )
+export default function Header() {
+  return (
+    <>
+      <div className="flex md:flex-row flex-col-reverse justify-between md:items-start items-end margin my-4">
+        <a href="/" className="w-fit" title="Happy Panda">
+          <img
+            className="md:w-80 md:h-auto md:mx-0 mx-auto"
+            src={logo}
+            alt="Logo"
+          />
+        </a>
+        <div className='md:mb-0 mb-2'>
+          {" "}
+          <Button caption="Make reservation" link="test" />
+        </div>
+      </div>
+    </>
+  );
 }

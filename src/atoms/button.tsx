@@ -1,20 +1,30 @@
 interface Props {
-    caption: string;
-    link: string;
-    disable?: boolean;
+  caption: string;
+  link?: string;
+  disable?: boolean;
+  style?: "rounded" | "half";
 }
 
-export default function Button({ caption, link, disable = false }: Props) {
-    return (
-        disable ?
-            < button className='aspect-rectangle px-8 py-4 w-fit bg-kfk-red hover:bg-zinc-950 rounded text-center min-w-[32px] min-h-[24px] text-white font-semibold capitalize flex items-center cursor-not-allowed' >
-                <span className='button-label'>{caption}</span>
-            </button >
-            :
-            <a className='flex aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 rounded text-center' href={link}>
-                < button className='text-white font-semibold capitalize flex items-center min-w-[32px] min-h-[24px]' >
-                    <span className='button-label'>{caption}</span>
-                </button >
-            </a >
-    )
+export default function Button({
+  caption,
+  link,
+  disable = false,
+  style = "rounded",
+}: Props) {
+  return disable ? (
+    <button className="aspect-rectangle px-8 py-4 w-fit bg-kfk-red hover:bg-zinc-950 rounded text-center min-w-[32px] text-white font-semibold capitalize flex items-center cursor-not-allowed">
+      <span className="button-label">{caption}</span>
+    </button>
+  ) : (
+    <a
+      className={`flex aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 ${
+        style == "rounded" ? "rounded" : "rounded-b"
+      } text-center min-h-[32px] justify-center`}
+      href={link}
+    >
+      <button className="text-white font-semibold capitalize flex items-center">
+        <span className="button-label">{caption}</span>
+      </button>
+    </a>
+  );
 }

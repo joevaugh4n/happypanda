@@ -1,23 +1,27 @@
-import CTA from "./cta"
-import Link from "../atoms/link"
-import GettingHere from "./getting-here"
+import CTA from "./cta";
+import Link from "../atoms/link";
+import strawberries from "/assets/strawberries.webp";
+import GettingHere from "./getting-here";
 
 export default function About() {
+  return (
+    <section className="margin flex flex-col gap-x-8 gap-y-4 py-8 bg-blue">
+      <div className=" grid md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="subheading mb-2 md:leading-[1.2] leading-[1.4]">
+            Delicious English and Chinese breakfasts, dim sum, authentic
+            Cantonese cuisine, hot pot, and BBQ, by the team behind{" "}
+            <Link
+              caption="Kungfu Kitchen"
+              target="https://kungfureading.co.uk"
+            />
+            .
+          </p>
+          <GettingHere />
+        </div>
 
-    return (
-        <section className='margin flex flex-col gap-y-4 pt-8'>
-            <div className='flex md:flex-row flex-col gap-x-8'>
-                <h2>A new, all-day café in south Reading</h2>
-                <div>
-                    <p className='mb-2'>Since 2019, we’ve been serving up Reading’s best-reviewed Chinese meals at <Link caption='Kungfu Kitchen' target='https://kungfureading.co.uk' />. Now, we’re expanding to bring you all-day breakfasts (including English and Chinese options), dim sum, authentic Cantonese cuisine, and BBQ.</p>
-                    <ul>
-                        <li><span className='list-label'>9am - 12pm</span>: English & Chinese breakfasts</li>
-                        <li><span className='list-label'>12pm - 5pm</span>: Dim Sum, authentic Cantonese cuisine</li>
-                        <li><span className='list-label'>Evening</span>: Authentic Cantonese cuisine, BBQ, hot pot</li>
-                    </ul>
-                </div>
-            </div>
-            <CTA />
-        </section>
-    )
+        <img src={strawberries} alt="Dish" className="rounded-lg" />
+      </div>
+    </section>
+  );
 }
