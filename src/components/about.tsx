@@ -9,7 +9,7 @@ export default function About() {
         <div className="flex flex-col gap-2">
           <p className="subheading mb-2 md:leading-[1.2] leading-[1.4]">
             Delicious English and Chinese breakfasts, dim sum, authentic
-            Cantonese cuisine, hot pot, and BBQ, by the team behind{" "}
+            Cantonese cuisine, hot pot, and BBQ. From the team behind{" "}
             <Link
               caption="Kungfu Kitchen"
               target="https://kungfureading.co.uk"
@@ -19,7 +19,7 @@ export default function About() {
           <GettingHere />
         </div>
 
-        <img src={strawberries} alt="Dish" className="rounded-lg" />
+        <img src={strawberries} alt="Dish" className="rounded" />
       </div>
     </section>
   );
