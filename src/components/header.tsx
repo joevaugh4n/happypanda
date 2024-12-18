@@ -7,7 +7,7 @@ export default function Header() {
       <div className="flex md:flex-row flex-col-reverse justify-between md:items-start items-end margin my-4">
         <a href="/" className="w-fit" title="Happy Panda">
           <img
-            className="md:w-80 md:h-auto md:mx-0 mx-auto"
+            className="md:w-3/5 md:h-auto md:mx-0 mx-auto"
             src={logo}
             alt="Logo"
           />
