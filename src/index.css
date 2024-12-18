@@ -25,7 +25,7 @@
   }
 
   .button-label {
-    @apply md:text-xl text-lg text-balance;
+    @apply md:text-2xl text-lg text-balance;
   }
 
   p.quote {
@@ -37,7 +37,7 @@
   }
 
   .margin {
-    @apply lg:px-6 px-4 mx-2 rounded
+    @apply lg:px-12 px-4 mx-2 rounded
   }
 
   a {
