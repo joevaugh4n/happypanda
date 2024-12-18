@@ -17,7 +17,7 @@ export default function Button({
     </button>
   ) : (
     <a
-      className={`flex aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 ${
+      className={`flex aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 shadow ${
         style == "rounded" ? "rounded" : "rounded-b"
       } text-center min-h-[32px] justify-center`}
       href={link}

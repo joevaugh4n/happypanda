@@ -5,7 +5,7 @@ import Picture from "../atoms/image";
 
 export default function ImageGallery() {
   return (
-    <section className="grid md:grid-cols-2 gap-8 margin py-8  bg-blue">
+    <section className="grid md:grid-cols-2 gap-8 margin py-8 border-slate-100 bg-blue">
       <Picture
         title="Example image"
         src={breakfast}

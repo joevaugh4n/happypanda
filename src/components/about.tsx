@@ -4,10 +4,10 @@ import GettingHere from "./getting-here";
 
 export default function About() {
   return (
-    <section className="margin flex flex-col gap-x-8 gap-y-4 py-8 bg-blue">
+    <section className="margin flex flex-col gap-x-8 gap-y-4 py-8 bg-blue border border-slate-100">
       <div className=" grid md:grid-cols-2 gap-8">
-        <div className="flex flex-col gap-2">
-          <p className="subheading mb-2 md:leading-[1.2] leading-[1.4]">
+        <div className="flex flex-col md:gap-8 gap-4">
+          <p className="text-2xl text-pretty">
             Delicious English and Chinese breakfasts, dim sum, authentic
             Cantonese cuisine, hot pot, and BBQ. From the team behind{" "}
             <Link
