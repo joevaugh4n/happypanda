@@ -1,5 +1,6 @@
 import { FaDirections, FaClock } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
+import { FaKitchenSet } from "react-icons/fa6";
 import { MdExpandCircleDown, MdArrowCircleUp } from "react-icons/md";
 import { useState } from "react";
 
@@ -40,7 +41,7 @@ export default function GettingHere() {
 
   return (
     <section>
-      <ul className="flex-col flex gap-2">
+      <ul className="flex-col flex gap-2 justify-start">
         <ListItem icon={<FaDirections />}>
           <a
             href="https://maps.app.goo.gl/e96rezVHwrr6gLPx5"
@@ -81,6 +82,9 @@ export default function GettingHere() {
               ))}
             </div>
           )}
+        </ListItem>
+        <ListItem icon={<FaKitchenSet />}>
+        <b className='text-kfk-red'>Serving times</b>: Brunch 9am-12pm, Dim Sum and Cantonese menu 12pm-10pm, BBQ and hot pot 5pm-10pm
         </ListItem>
       </ul>
     </section>

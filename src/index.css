@@ -17,30 +17,30 @@
 
   p,
   li {
-    @apply md:text-xl text-lg
+    @apply text-lg
   }
 
-  li>.list-label {
-    @apply font-medium
+  li > .list-label {
+    @apply font-medium;
   }
 
   .button-label {
-    @apply md:text-2xl text-lg text-balance;
+    @apply md:text-lg text-balance;
   }
 
   p.quote {
-    @apply md:text-2xl text-xl italic;
+    @apply md:text-2xl italic;
   }
 
   .subheading {
-    @apply md:text-4xl text-2xl font-bold text-pretty md:pb-2
+    @apply text-2xl font-bold text-pretty md:pb-2;
   }
 
   .margin {
-    @apply lg:px-12 px-4 mx-2 rounded
+    @apply lg:px-12 px-4 mx-2 rounded;
   }
 
   a {
-    @apply font-bold
+    @apply font-bold;
   }
 }
