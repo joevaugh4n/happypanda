@@ -70,7 +70,7 @@ export default function GettingHere() {
             )}
           </span>
           {list && (
-            <div className="mt-6">
+            <div className="mt-6 mb-8">
               <h3>Full opening hours</h3>
               {Object.entries(openingHours).map(([day, hours]) => (
                 <p

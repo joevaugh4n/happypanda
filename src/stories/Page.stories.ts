@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import App from "../App";
-import '../index.css'
+import "../index.css";
 
 const meta = {
   title: "Example/Page",
@@ -12,4 +12,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedOut: Story = {};
+export const Primary: Story = {};

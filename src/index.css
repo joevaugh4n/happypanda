@@ -8,7 +8,7 @@
   }
 
   h2 {
-    @apply md:text-6xl text-4xl text-balance md:pb-6 pb-4 font-bold text-kfk-red;
+    @apply md:text-4xl text-3xl text-balance font-bold
   }
 
   h3 {
@@ -20,12 +20,12 @@
     @apply text-lg
   }
 
-  li > .list-label {
+  li>.list-label {
     @apply font-medium;
   }
 
   .button-label {
-    @apply md:text-lg text-balance;
+    @apply md:text-xl text-lg text-balance;
   }
 
   p.quote {
