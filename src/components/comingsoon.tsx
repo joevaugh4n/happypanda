@@ -10,12 +10,12 @@ export default function ComingSoon() {
           className="md:w-2/5 md:h-auto inline-block w-fit h-fit"
           title="Happy Panda"
         >
-          <img className="md:mx-0 mx-auto w-fit" src={logo} alt="Logo" />
+          <img className="md:mx-0 w-fit" src={logo} alt="Logo" />
         </a>
         <h2>Website coming soon...</h2>
         <p>
           In the meantime:
-          <ul className="my-1">
+          <ul className="my-2">
             <li>
               tel:&nbsp;
               <a
