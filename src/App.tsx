@@ -17,7 +17,7 @@ export default function App() {
     <>
       <Notice />
 
-      <Layout status="closed">
+      <Layout title="Happy Panda" status="closed">
         <Header buttonLabel="Make a reservation" buttonNumber="test" />
         <About />
         <Gallery>
