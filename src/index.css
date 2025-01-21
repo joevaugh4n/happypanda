@@ -17,7 +17,7 @@
 
   p,
   li {
-    @apply text-lg
+    @apply text-lg text-pretty
   }
 
   li>.list-label {
@@ -25,7 +25,7 @@
   }
 
   .button-label {
-    @apply md:text-xl text-lg text-balance;
+    @apply text-balance hover:no-underline;
   }
 
   p.quote {
@@ -41,6 +41,6 @@
   }
 
   a {
-    @apply font-bold;
+    @apply font-bold text-kfk-red hover:underline;
   }
 }

@@ -11,10 +11,10 @@ export default function Picture({ title, src, caption, alt }: Props) {
       <img
         title={title}
         alt={alt ? alt : title}
-        className={`rounded-lg ${caption && "mb-2"}`}
+        className={`rounded-lg`}
         src={src}
       />
-      {caption && <p className="text-sm">{caption}</p>}
+      {caption && <p className="text-sm mt-2">{caption}</p>}
     </figure>
   );
 }

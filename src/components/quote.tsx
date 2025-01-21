@@ -10,7 +10,7 @@ export default function Quote({ quote, author }: Props) {
     <section className="flex flex-col margin">
       <FaQuoteLeft className="text-kfk-red md:mb-8 mb-4 md:self-center" />
       <p className="mb-4 italic text-pretty">{quote}</p>
-      <p className='text-pretty'>— {author}</p>
+      <p className="text-pretty">— {author}</p>
     </section>
   );
 }

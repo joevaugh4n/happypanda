@@ -1,4 +1,4 @@
-import logo from "/assets/logo.png";
+import logo from "/assets/logo.webp";
 
 /** Header component. Contains the KFK logo and the CTA button, top right. */
 export default function ComingSoon() {

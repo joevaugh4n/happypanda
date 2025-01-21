@@ -1,5 +1,5 @@
 import Button from "../atoms/button";
-import logo from "/assets/logo.png";
+import logo from "/assets/logo.webp";
 
 interface HeaderProps {
   /** The button text */
@@ -9,16 +9,19 @@ interface HeaderProps {
 }
 
 /** Header component. Contains the KFK logo and the CTA button, top right. */
-export default function Header({ buttonLabel, buttonNumber }: HeaderProps) {
+export default function Header({
+  buttonLabel,
+  buttonNumber = "07587 577966",
+}: HeaderProps) {
   return (
     <>
       <div className="flex md:flex-row flex-col-reverse justify-between md:items-start items-end margin mt-4">
         <a
           href="/"
-          className="md:w-2/5 md:h-auto inline-block w-fit h-fit"
+          className="md:w-2/5 md:h-auto inline-block w-[80%] h-auto self-center"
           title="Happy Panda"
         >
-          <img className="md:mx-0 mx-auto w-fit" src={logo} alt="Logo" />
+          <img className="lg:mx-0 mx-auto" src={logo} alt="Logo" />
         </a>
         <div className="md:mb-0 mb-2">
           {" "}
