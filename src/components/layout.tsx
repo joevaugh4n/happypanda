@@ -9,9 +9,9 @@ interface Props {
 
 export default function Layout({ children, status, title }: Props) {
   return (
-    <div className="flex flex-col bg-white gap-8">
+    <div className="flex flex-col bg-white gap-8 first">
       <h1 className='hidden'>{title}</h1>
-      {status == "open" ? children : <ComingSoon />}{" "}
+      {status == "open" ? children : <ComingSoon />}
     </div>
   );
 }

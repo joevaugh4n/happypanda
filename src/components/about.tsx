@@ -5,7 +5,8 @@ import Link from "../atoms/link";
 export default function About() {
   return (
     <section className="margin flex flex-col gap-x-8 gap-y-4 py-8 bg-blue border border-slate-100">
-      <div className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4">
+        <h2 className="hidden">About</h2>
         <p>
           Delicious English and Chinese breakfasts, Dim Sum, authentic Cantonese
           cuisine, hot pot, and BBQ, from the team behind&nbsp;
@@ -13,7 +14,7 @@ export default function About() {
           .
         </p>
         <GettingHere />
-      </div>
+      </section>
     </section>
   );
 }

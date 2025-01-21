@@ -1,5 +1,6 @@
 import "./index.css";
 import About from "./components/about";
+import Button from "./atoms/button";
 import Footer from "./components/footer";
 import Gallery from "./components/gallery";
 import Header from "./components/header";
@@ -18,12 +19,13 @@ export default function App() {
       <Notice />
 
       <Layout title="Happy Panda" status="closed">
-        <Header buttonLabel="Make a reservation" buttonNumber="test" />
+        <Button absolute caption={"Make a reservation"} link={"tel:07587 577966"} />
+        <Header />
         <About />
         <Gallery>
           <Picture title="Example image" src={strawberries} caption="test" />
           <Picture title="Example image" src={cantonese} caption="test" />
-          <Picture title="Example image" src={strawberries} caption="test" />
+          <Picture title="Example image" src={strawberries} />
           <Picture title="Example image" src={cantonese} caption="test" />
         </Gallery>
         <Quote
