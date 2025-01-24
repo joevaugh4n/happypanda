@@ -2,7 +2,7 @@ import Nav from "./navigation";
 
 export default function Footer() {
   return (
-    <address className="py-4 grid grid-cols-[3fr_1fr] not-italic gap-4 margin border-t-blue border-t-2">
+    <address className="py-4 grid grid-cols-[2fr_1fr] not-italic margin border-t-blue border-t-2">
       <div className="flex flex-col gap-1">
         <p className="font-medium">© Happy Panda, 2024</p>
         <p>

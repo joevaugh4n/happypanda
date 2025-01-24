@@ -6,9 +6,9 @@ export default function Menus() {
   return (
     <div>
       <h2 className="margin mb-2">Menus</h2>
-      <section className="flex gap-8 py-8 border-slate-100 bg-blue margin">
-        <Button link={cafeMenu} caption="Cantonese/Dim Sum Menu" />
-        <Button link={brunch} caption="Chinese & English brunch" />
+      <section className="md:flex grid gap-x-8 gap-y-4 py-8 border-slate-100 bg-blue margin">
+        <Button full link={cafeMenu} caption="Cantonese/Dim Sum Menu" />
+        <Button full link={brunch} caption="Chinese & English brunch" />
       </section>
     </div>
   );
