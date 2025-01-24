@@ -10,14 +10,16 @@ export default function Notice({ toggle }: Props) {
 
   return (
     open && (
-      <div className='bg-kfk-red px-2'>
-        <p className="py-2 bg-blue-500 text-white text-pretty flex justify-center gap-2 mb-8">
-          Example text that you could use to advertise something.{" "}
-          <FaRegWindowClose
-            className="hover:cursor-pointer"
-            onClick={() => setOpen(false)}
-          />
+      <div className="bg-kfk-red px-2 flex justify-center mb-8 gap-8">
+        <p className="py-2 bg-blue-500 text-white text-pretty">
+          Thank you to everyone who has visited us so far! Enjoyed your visit?
+          Please leave us a Google review!
         </p>
+
+        <FaRegWindowClose
+          className="hover:cursor-pointer text-xl"
+          onClick={() => setOpen(false)}
+        />
       </div>
     )
   );
