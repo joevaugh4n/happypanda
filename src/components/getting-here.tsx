@@ -15,7 +15,7 @@ export default function GettingHere() {
           </a>
         </ListItem>
         <ListItem icon={<FaClock />}>
-          <div className="mb-2 font-bold text-kfk-red">Every day, 9am to 9:30pm</div>
+          <div className="mb-2 font-bold">Every day, 9am to 9:30pm</div>
           <ul className="flex flex-col text-balance gap-1">
             <li className="text-balance">
               9am to 12pm:&nbsp; Chinese and English breakfasts
