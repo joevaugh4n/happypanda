@@ -1,6 +1,6 @@
 import Button from "../atoms/button";
-import cafeMenu from "/assets/cafe.pdf";
-import brunch from "/assets/classics.pdf";
+import cafeMenu from "/menus/cafe.pdf";
+import brunch from "/menus/classics.pdf";
 
 export default function Menus() {
   return (
