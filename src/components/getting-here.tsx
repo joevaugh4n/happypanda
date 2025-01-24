@@ -18,13 +18,13 @@ export default function GettingHere() {
           <div className="mb-2 font-bold">Every day, 9am to 9:30pm</div>
           <ul className="flex flex-col text-balance gap-1">
             <li className="text-balance">
-              9am to 12pm:&nbsp; Chinese and English breakfasts
+              9am to 12pm:&nbsp;Chinese and English breakfasts
             </li>
             <li className="text-balance">
-              11am to 9:30pm:&nbsp; Cantonese cuisine and dim sum
+              11am to 9:30pm:&nbsp;Cantonese cuisine and dim sum
             </li>
             <li className="text-balance">
-              6pm to 9:30pm:&nbsp; Hot pot and barbecue, booking essential
+              6pm to 9:30pm:&nbsp;Hot pot and barbecue, booking essential
               (available at lunch with prebooking)
             </li>
           </ul>
