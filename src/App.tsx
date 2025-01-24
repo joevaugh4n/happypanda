@@ -1,5 +1,6 @@
 import "./index.css";
 import About from "./components/about";
+import Advert from "./components/advert";
 import Button from "./atoms/button";
 import Footer from "./components/footer";
 import Gallery from "./components/gallery";
@@ -24,6 +25,7 @@ export default function App() {
         <Button absolute caption="Call now" link="tel:07587 577966" />
         <Header />
         <About />
+        <Advert />
         <Gallery>
           <Picture title="Breakfast at Happy Panda" src={strawberries} />
           <Picture title="Dumplings at Happy Panda" src={cake} />

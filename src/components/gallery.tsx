@@ -6,6 +6,6 @@ interface Props {
 
 export default function Gallery({ children }: Props) {
   return (
-    <div className="grid sm:grid-cols-2 gap-8 margin items-start">{children}</div>
+    <div className="grid md:grid-cols-2 gap-8 margin items-start">{children}</div>
   );
 }

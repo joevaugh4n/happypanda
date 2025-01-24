@@ -1,6 +1,6 @@
 interface Props {
   caption: string;
-  link: string;
+  link?: string;
   style?: "rounded" | "half";
   absolute?: boolean;
 }
