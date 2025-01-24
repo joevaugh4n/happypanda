@@ -41,6 +41,10 @@
   }
 
   a {
-    @apply font-bold text-kfk-red hover:underline;
+    @apply font-bold text-kfk-red hover:text-black hover:underline;
+  }
+
+  b {
+    @apply text-kfk-red
   }
 }

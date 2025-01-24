@@ -2,10 +2,15 @@ import Nav from "./navigation";
 
 export default function Footer() {
   return (
-    <address className="text-pretty py-4 grid grid-cols-[2fr_1fr] not-italic gap-4 margin border-t-blue border-t-2">
-      <div className="flex flex-col gap-2">
+    <address className="py-4 grid grid-cols-[3fr_1fr] not-italic gap-4 margin border-t-blue border-t-2">
+      <div className="flex flex-col gap-1">
         <p className="font-medium">© Happy Panda, 2024</p>
-        <p>Address: 80 Christchurch Road, Reading, RG2 7AZ</p>{" "}
+        <p>
+          Address:&nbsp;
+          <a href="https://maps.app.goo.gl/AxHZRgymPKVHzhLM9">
+            80 Christchurch Road, Reading, RG2 7AZ
+          </a>
+        </p>
         <p>
           Tel: <a href="tel:07587 577966">07587 577966</a>
         </p>

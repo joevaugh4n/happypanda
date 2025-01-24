@@ -5,16 +5,32 @@ import ListItem from "../atoms/list-item";
 export default function GettingHere() {
   return (
     <section>
-      <ul className="flex-col flex gap-2 justify-start">
+      <ul className="flex-col flex gap-4 justify-start">
         <ListItem icon={<FaDirections />}>
           <a
-            href="https://maps.app.goo.gl/e96rezVHwrr6gLPx5"
+            href="https://maps.app.goo.gl/AxHZRgymPKVHzhLM9"
             className="text-kfk-red hover:underline"
           >
             80 Christchurch Road, Reading, RG2 7AZ
           </a>
         </ListItem>
+        <ListItem icon={<FaClock />}>
+          <div className="mb-2 font-bold text-kfk-red">Every day, 9am to 9:30pm</div>
+          <ul className="flex flex-col text-balance gap-1">
+            <li className="text-balance">
+              9am to 12pm:&nbsp; Chinese and English breakfasts
+            </li>
+            <li className="text-balance">
+              11am to 9:30pm:&nbsp; Cantonese cuisine and dim sum
+            </li>
+            <li className="text-balance">
+              6pm to 9:30pm:&nbsp; Hot pot and barbecue, booking essential
+              (available at lunch with prebooking)
+            </li>
+          </ul>
+        </ListItem>
         <ListItem icon={<FaPhone />}>
+          Book now at&nbsp;
           <a href="tel:07587 577966" className="text-kfk-red hover:underline">
             07587 577966
           </a>
@@ -25,9 +41,6 @@ export default function GettingHere() {
           >
             email
           </a>
-        </ListItem>
-        <ListItem icon={<FaClock />}>
-          <span>TBC</span>
         </ListItem>
       </ul>
     </section>

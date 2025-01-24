@@ -11,7 +11,7 @@ export default function Picture({ title, src, caption, alt }: Props) {
       <img
         title={title}
         alt={alt ? alt : title}
-        className={`rounded-lg top-0 relative`}
+        className={`rounded-lg max-h-[50%]`}
         src={src}
       />
       {caption && <p className="text-sm mt-2">{caption}</p>}

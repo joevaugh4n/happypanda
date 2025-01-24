@@ -7,7 +7,7 @@ export default function Header() {
       <div className="flex md:flex-row flex-col-reverse justify-between md:items-start margin">
         <a
           href="/"
-          className="md:w-2/5 md:h-auto inline-block w-[80%] h-auto self-center"
+          className="md:w-2/5 md:h-auto inline-block w-[80%] h-auto self-center hover:border"
           title="Happy Panda"
         >
           <img className="lg:mx-0 mx-auto" src={logo} alt="Logo" />

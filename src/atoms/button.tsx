@@ -16,7 +16,7 @@ export default function Button({
       className={`flex aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 shadow min-w-[32px] w-fit ${
         style == "rounded" ? "rounded-[60px]" : "rounded-b"
       } text-center min-h-[32px] justify-center hover:cursor-pointer hover:no-underline ${
-        absolute && "z-1 top-2 sticky self-end md:right-16 right-4"
+        absolute && "z-1 top-2 sticky self-end justify-end md:right-16 right-4"
       }`}
       href={link}
     >

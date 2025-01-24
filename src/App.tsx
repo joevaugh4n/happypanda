@@ -11,22 +11,24 @@ import Picture from "./atoms/image";
 import Quote from "./components/quote";
 // image imports
 import strawberries from "/assets/strawberries.webp";
-import cantonese from "/assets/cantonese.jpeg";
+import cake from "/assets/cake.png";
+import mockbeef from "/assets/vegan-beef.webp";
+import meat from "/assets/meat.webp";
 
 export default function App() {
   return (
     <>
       <Notice />
 
-      <Layout title="Happy Panda" status="closed">
-        <Button absolute caption={"Make a reservation"} link={"tel:07587 577966"} />
+      <Layout title="Happy Panda" status="open">
+        <Button absolute caption="Call now" link="tel:07587 577966" />
         <Header />
         <About />
         <Gallery>
-          <Picture title="Example image" src={strawberries} caption="test" />
-          <Picture title="Example image" src={cantonese} caption="test" />
-          <Picture title="Example image" src={strawberries} />
-          <Picture title="Example image" src={cantonese} caption="test" />
+          <Picture title="Breakfast at Happy Panda" src={strawberries} />
+          <Picture title="Dumplings at Happy Panda" src={cake} />
+          <Picture title="Vegan mock beef at Happy Panda" src={mockbeef} />
+          <Picture title="A meat and crab dish at Happy Panda" src={meat} />
         </Gallery>
         <Quote
           quote="But look closer, and you’ll find this is no run-of-the-mill regional takeaway. Not so much lemon chicken as stir-fried lamb’s tripe with coriander and Dongpo-style pig shoulder."
