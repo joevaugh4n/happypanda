@@ -3,7 +3,11 @@ import { useState } from "react";
 import ad1 from "/assets/ad1.jpeg";
 import ad2 from "/assets/ad2.jpeg";
 
-export default function Advert() {
+interface Props {
+  title: string;
+}
+
+export default function Advert({ title }: Props) {
   const [view, changeView] = useState(true);
   return (
     <div className="margin mx-auto flex flex-col items-center gap-2 scroll-smooth">
@@ -13,6 +17,7 @@ export default function Advert() {
         src={view ? ad1 : ad2}
         alt="Spring festival edition all you can eat - £34.99 per person"
         className="md:w-2/3 hover:cursor-pointer"
+        title={title}
       />
       <a href="/#ad">
         <button

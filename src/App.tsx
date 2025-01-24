@@ -18,14 +18,17 @@ import meat from "/assets/meat.webp";
 
 export default function App() {
   const telephone = `07884784688`;
+  const email = "info@happypandareading.co.uk";
+  const address = "80 Christchurch Road, Reading, RG2 7AZ";
+
   return (
     <>
       <Notice />
       <Layout title="Happy Panda" status="open">
-        <Button absolute caption="Call now" link={`tel:${telephone}`} />
+        <Button absolute caption="Call Happy Panda" link={`tel:${telephone}`} />
         <Header />
-        <About telephone={telephone} />
-        <Advert />
+        <About telephone={telephone} email={email} address={address} />
+        <Advert title="Spring festival" />
         <Gallery>
           <Picture title="Breakfast at Happy Panda" src={strawberries} />
           <Picture title="Dumplings at Happy Panda" src={cake} />
@@ -37,7 +40,7 @@ export default function App() {
           author="Tom Parker Bowles, on Kungfu Kitchen"
         />
         <Menus />
-        <Footer telephone={telephone} />
+        <Footer telephone={telephone} email={email} address={address} />
       </Layout>
     </>
   );

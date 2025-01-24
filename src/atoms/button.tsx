@@ -21,6 +21,7 @@ export default function Button({
         absolute && "z-1 top-2 sticky self-end justify-end md:right-16 right-4"
       } ${full ? "md:w-fit w-full" : "w-fit"}`}
       href={link}
+      title={link}
     >
       <button className="text-white font-semibold capitalize flex items-center">
         <span className="button-label">{caption}</span>

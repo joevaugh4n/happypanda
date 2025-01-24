@@ -4,18 +4,21 @@ import ListItem from "../atoms/list-item";
 
 interface Props {
   telephone: string;
+  email: string;
+  address: string;
 }
 
-export default function GettingHere({ telephone }: Props) {
+export default function GettingHere({ telephone, email, address }: Props) {
   return (
     <section>
       <ul className="flex-col flex gap-4 justify-start">
         <ListItem icon={<FaDirections />}>
           <a
             href="https://maps.app.goo.gl/AxHZRgymPKVHzhLM9"
+            title={address}
             className="text-kfk-red hover:underline"
           >
-            80 Christchurch Road, Reading, RG2 7AZ
+            {address}
           </a>
         </ListItem>
         <ListItem icon={<FaClock />}>
@@ -35,13 +38,18 @@ export default function GettingHere({ telephone }: Props) {
         </ListItem>
         <ListItem icon={<FaPhone />}>
           Book now at&nbsp;
-          <a href={`tel:${telephone}`} className="text-kfk-red hover:underline">
+          <a
+            title={telephone}
+            href={`tel:${telephone}`}
+            className="text-kfk-red hover:underline"
+          >
             {telephone}
           </a>
           &nbsp;/&nbsp;
           <a
-            href="mailto:info@happypandareading.co.uk"
+            href={`mailto:${email}`}
             className="text-kfk-red hover:underline"
+            title={email}
           >
             email
           </a>
