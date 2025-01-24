@@ -17,14 +17,14 @@ import mockbeef from "/assets/vegan-beef.webp";
 import meat from "/assets/meat.webp";
 
 export default function App() {
+  const telephone = `07884784688`;
   return (
     <>
       <Notice />
-
       <Layout title="Happy Panda" status="open">
-        <Button absolute caption="Call now" link="tel:07587 577966" />
+        <Button absolute caption="Call now" link={`tel:${telephone}`} />
         <Header />
-        <About />
+        <About telephone={telephone} />
         <Advert />
         <Gallery>
           <Picture title="Breakfast at Happy Panda" src={strawberries} />
@@ -37,7 +37,7 @@ export default function App() {
           author="Tom Parker Bowles, on Kungfu Kitchen"
         />
         <Menus />
-        <Footer />
+        <Footer telephone={telephone} />
       </Layout>
     </>
   );

@@ -1,6 +1,10 @@
 import Nav from "./navigation";
 
-export default function Footer() {
+interface Props {
+  telephone: string;
+}
+
+export default function Footer({ telephone }: Props) {
   return (
     <address className="py-4 grid grid-cols-[2fr_1fr] not-italic margin border-t-blue border-t-2">
       <div className="flex flex-col gap-1">
@@ -12,7 +16,7 @@ export default function Footer() {
           </a>
         </p>
         <p>
-          Tel: <a href="tel:07587 577966">07587 577966</a>
+          Tel: <a href={`tel:${telephone}`}>{telephone}</a>
         </p>
         <p>
           Email:{" "}
@@ -22,7 +26,7 @@ export default function Footer() {
         </p>
       </div>
       <>
-        <Nav />
+        <Nav telephone={telephone} />
         <p className="self-end">
           Site by <a href="https://joevaughan.net/">Joe Vaughan</a>
         </p>

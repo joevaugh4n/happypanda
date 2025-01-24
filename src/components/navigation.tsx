@@ -1,7 +1,11 @@
 import { FaPhone, FaInstagram, FaWeixin } from "react-icons/fa";
 import SocialIcon from "../atoms/social-icon";
 
-export default function Nav() {
+interface Props {
+  telephone: string;
+}
+
+export default function Nav({ telephone }: Props) {
   return (
     <ul className="flex justify-end gap-2">
       <SocialIcon
@@ -14,7 +18,7 @@ export default function Nav() {
         title="Weibo"
         url="weixin://dl/chat?{Yipin-Joanna521}"
       />
-      <SocialIcon icon={<FaPhone />} title="Call" url="tel:07587 577966" />
+      <SocialIcon icon={<FaPhone />} title="Call" url={`tel:${telephone}`} />
     </ul>
   );
 }

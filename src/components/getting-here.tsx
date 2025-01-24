@@ -2,7 +2,11 @@ import { FaDirections, FaClock } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import ListItem from "../atoms/list-item";
 
-export default function GettingHere() {
+interface Props {
+  telephone: string;
+}
+
+export default function GettingHere({ telephone }: Props) {
   return (
     <section>
       <ul className="flex-col flex gap-4 justify-start">
@@ -31,8 +35,8 @@ export default function GettingHere() {
         </ListItem>
         <ListItem icon={<FaPhone />}>
           Book now at&nbsp;
-          <a href="tel:07587 577966" className="text-kfk-red hover:underline">
-            07587 577966
+          <a href={`tel:${telephone}`} className="text-kfk-red hover:underline">
+            {telephone}
           </a>
           &nbsp;/&nbsp;
           <a
