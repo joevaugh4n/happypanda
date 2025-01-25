@@ -1,3 +1,6 @@
+import React from "react";
+import ReactGA from "react-ga4";
+
 interface Props {
   caption: string;
   link?: string;
@@ -13,6 +16,21 @@ export default function Button({
   absolute,
   full,
 }: Props) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!link) {
+      e.preventDefault(); // Prevent navigation if no link is provided
+      console.warn("Button link is missing!");
+      return;
+    }
+
+    // Send the GA4 event
+    ReactGA.event({
+      category: "Button",
+      action: "Click",
+      label: caption || link,
+    });
+  };
+
   return (
     <a
       className={`flex aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 shadow min-w-[32px] ${
@@ -22,6 +40,7 @@ export default function Button({
       } ${full ? "md:w-fit w-full" : "w-fit"}`}
       href={link}
       title={caption ? caption : link}
+      onClick={handleClick} // Add the click handler here
     >
       <button className="text-white font-semibold capitalize flex items-center">
         <span className="button-label">{caption}</span>

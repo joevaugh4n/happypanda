@@ -1,7 +1,9 @@
 import "./index.css";
+import ReactGA from "react-ga4";
 import About from "./components/about";
 import Advert from "./components/advert";
 import Button from "./atoms/button";
+import CookieConsent from "react-cookie-consent";
 import Footer from "./components/footer";
 import Gallery from "./components/gallery";
 import Header from "./components/header";
@@ -21,8 +23,29 @@ export default function App() {
   const email = "info@happypandareading.co.uk";
   const address = "80 Christchurch Road, Reading, RG2 7AZ";
 
+  const handleGAInitialization = () => {
+    ReactGA.initialize("G-WMKZB2M77W");
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
+  };
+
   return (
     <>
+      <CookieConsent
+        flipButtons
+        location="bottom"
+        buttonText="Accept"
+        declineButtonText="Decline"
+        enableDeclineButton
+        style={{ background: "#2B373B" }}
+        onAccept={handleGAInitialization}
+        onDecline={() => console.log("User declined cookies.")}
+        expires={60}
+      >
+        🐼 We use (fortune) cookies to enhance our user experience.
+      </CookieConsent>
       <Notice />
       <Layout title="Happy Panda" status="open">
         <Button absolute caption="Call Happy Panda" link={`tel:${telephone}`} />
@@ -37,7 +60,7 @@ export default function App() {
         </Gallery>
         <Quote
           quote="But look closer, and you’ll find this is no run-of-the-mill regional takeaway. Not so much lemon chicken as stir-fried lamb’s tripe with coriander and Dongpo-style pig shoulder."
-          author="Tom Parker Bowles, on Kungfu Kitchen"
+          author="Tom Parkenr Bowles, on Kungfu Kitchen"
         />
         <Menus />
         <Footer telephone={telephone} email={email} address={address} />
