@@ -7,7 +7,7 @@ import Menus from "./components/Menus";
 import Notice from "./components/notice";
 import Picture from "./atoms/image";
 import Quote from "./components/quote";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 // image imports
 import strawberries from "/assets/strawberries.webp";
 import cake from "/assets/cake.png";
@@ -86,13 +86,13 @@ function NotFound() {
 export default function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menus" element={<MenusPage />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
