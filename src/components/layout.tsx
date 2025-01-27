@@ -3,11 +3,11 @@ import ComingSoon from "./comingsoon";
 
 interface Props {
   children: ReactNode;
-  status: "open" | "closed";
+  status?: "open" | "closed";
   title: string;
 }
 
-export default function Layout({ children, status, title }: Props) {
+export default function Layout({ children, status='open', title }: Props) {
   return (
     <div className="flex flex-col bg-white gap-8 first">
       <h1 className="hidden">{title}</h1>

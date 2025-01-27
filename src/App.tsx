@@ -47,10 +47,15 @@ export default function App() {
         🐼 We use (fortune) cookies to enhance our user experience.
       </CookieConsent>
       <Notice />
-      <Layout title="Happy Panda" status="open">
+      <Layout title="Happy Panda">
         <Button absolute caption="Call Happy Panda" link={`tel:${telephone}`} />
         <Header />
-        <About telephone={telephone} email={email} address={address} />
+        <About
+          openOn="Open every day but Tuesday"
+          telephone={telephone}
+          email={email}
+          address={address}
+        />
         <Advert title="Spring festival" />
         <Gallery>
           <Picture title="Breakfast at Happy Panda" src={strawberries} />
@@ -60,7 +65,8 @@ export default function App() {
         </Gallery>
         <Quote
           quote="But look closer, and you’ll find this is no run-of-the-mill regional takeaway. Not so much lemon chicken as stir-fried lamb’s tripe with coriander and Dongpo-style pig shoulder."
-          author="Tom Parkenr Bowles, on Kungfu Kitchen"
+          author="Tom Parker Bowles"
+          source="The Telegraph"
         />
         <Menus />
         <Footer telephone={telephone} email={email} address={address} />

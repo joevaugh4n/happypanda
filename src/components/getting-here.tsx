@@ -6,9 +6,15 @@ interface Props {
   telephone: string;
   email: string;
   address: string;
+  openOn: string;
 }
 
-export default function GettingHere({ telephone, email, address }: Props) {
+export default function GettingHere({
+  telephone,
+  email,
+  address,
+  openOn,
+}: Props) {
   return (
     <section>
       <ul className="flex-col flex gap-4 justify-start">
@@ -22,17 +28,18 @@ export default function GettingHere({ telephone, email, address }: Props) {
           </a>
         </ListItem>
         <ListItem icon={<FaClock />}>
-          <div className="mb-2 font-bold">Every day, 9am to 9:30pm</div>
+          <div className="mb-2 font-bold">{openOn}</div>
           <ul className="flex flex-col text-balance gap-1">
             <li className="text-balance">
-              9am to 12pm:&nbsp;Chinese and English breakfasts
+              9am - 12pm:&nbsp;Chinese and English breakfasts
             </li>
             <li className="text-balance">
-              11am to 9:30pm:&nbsp;Cantonese cuisine and dim sum
+              11am - 9:30pm:&nbsp;Cantonese cuisine and dim sum
             </li>
             <li className="text-balance">
-              6pm to 9:30pm:&nbsp;Hot pot and barbecue, booking essential
-              (available at lunch with prebooking)
+              6pm - 9:30pm:&nbsp;Hotpot and Korean BBQ, <u>booking essential</u>{" "}
+              so we can prepare all the fresh ingredients for you (available at
+              lunch with prebooking)
             </li>
           </ul>
         </ListItem>
