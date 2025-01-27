@@ -1,55 +1,34 @@
 import "./index.css";
-import ReactGA from "react-ga4";
 import About from "./components/about";
 import Advert from "./components/advert";
-import Button from "./atoms/button";
-import CookieConsent from "react-cookie-consent";
-import Footer from "./components/footer";
 import Gallery from "./components/gallery";
-import Header from "./components/header";
 import Layout from "./components/layout";
 import Menus from "./components/Menus";
 import Notice from "./components/notice";
 import Picture from "./atoms/image";
 import Quote from "./components/quote";
+import { BrowserRouter, Route, Routes } from "react-router";
 // image imports
 import strawberries from "/assets/strawberries.webp";
 import cake from "/assets/cake.png";
 import mockbeef from "/assets/vegan-beef.webp";
 import meat from "/assets/meat.webp";
 
-export default function App() {
-  const telephone = `07884784688`;
-  const email = "info@happypandareading.co.uk";
-  const address = "80 Christchurch Road, Reading, RG2 7AZ";
+const telephone = `07884784688`;
+const email = "info@happypandareading.co.uk";
+const address = "80 Christchurch Road, Reading, RG2 7AZ";
 
-  const handleGAInitialization = () => {
-    ReactGA.initialize("G-WMKZB2M77W");
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname + window.location.search,
-    });
-  };
-
+function Index() {
   return (
     <>
-      <CookieConsent
-        flipButtons
-        location="bottom"
-        buttonText="Accept"
-        declineButtonText="Decline"
-        enableDeclineButton
-        style={{ background: "#2B373B" }}
-        onAccept={handleGAInitialization}
-        onDecline={() => console.log("User declined cookies.")}
-        expires={60}
+      <Layout
+        logoSize="large"
+        telephone={telephone}
+        title="Happy Panda"
+        email={email}
+        address={address}
       >
-        🐼 We use (fortune) cookies to enhance our user experience.
-      </CookieConsent>
-      <Notice />
-      <Layout title="Happy Panda">
-        <Button absolute caption="Call Happy Panda" link={`tel:${telephone}`} />
-        <Header />
+        <Notice />
         <About
           openOn="Open every day but Tuesday"
           telephone={telephone}
@@ -68,9 +47,52 @@ export default function App() {
           author="Tom Parker Bowles"
           source="The Telegraph"
         />
-        <Menus />
-        <Footer telephone={telephone} email={email} address={address} />
+        <Menus title />
       </Layout>
+    </>
+  );
+}
+
+function MenusPage() {
+  return (
+    <Layout
+      title="Menus"
+      logoSize="small"
+      telephone={telephone}
+      email={email}
+      address={address}
+    >
+      <h1 className="text-black">Menus</h1>
+      <Menus />
+    </Layout>
+  );
+}
+
+function NotFound() {
+  return (
+    <Layout
+      title="Menus"
+      logoSize="small"
+      telephone={telephone}
+      email={email}
+      address={address}
+    >
+      <h1 className="text-black">Page not found</h1>
+      <a href="/">Return to homepage</a>
+    </Layout>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/menus" element={<MenusPage />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

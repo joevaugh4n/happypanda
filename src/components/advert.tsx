@@ -10,7 +10,7 @@ interface Props {
 export default function Advert({ title }: Props) {
   const [view, changeView] = useState(true);
   return (
-    <div className="margin mx-auto flex flex-col items-center gap-2 scroll-smooth">
+    <div className="mx-auto flex flex-col items-center gap-2 scroll-smooth">
       <img
         onClick={() => changeView(!view)}
         id="ad"

@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply md:text-8xl text-6xl text-white font-bold tracking-widest max-w-[6ch] mb-4;
+    @apply md:text-8xl text-6xl text-white font-bold mb-4;
   }
 
   h2 {
@@ -37,7 +37,7 @@
   }
 
   .margin {
-    @apply lg:px-12 px-4 mx-2 rounded;
+    @apply lg:px-6 px-1 mx-2 rounded;
   }
 
   a {

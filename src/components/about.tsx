@@ -11,7 +11,7 @@ interface Props {
 /** The about section. Contains title, text, the Getting Here component, and a slot for one image */
 export default function About({ telephone, email, address, openOn }: Props) {
   return (
-    <section className="margin flex flex-col gap-x-8 gap-y-4 py-8 bg-blue border border-slate-100">
+    <section className="flex flex-col gap-x-8 gap-y-4 px-4 py-8 bg-blue border border-slate-100">
       <section className="flex flex-col gap-4 mx-auto margin">
         <h2 className="hidden">Welcome to Happy Panda</h2>
         <p className="text-pretty text-lg">
