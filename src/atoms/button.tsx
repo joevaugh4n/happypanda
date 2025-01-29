@@ -43,7 +43,7 @@ export default function Button({
       onClick={handleClick} // Add the click handler here
     >
       <button className="text-white font-semibold capitalize flex items-center">
-        <span className="button-label">{caption}</span>
+        <span className="button-label font-bold">{caption}</span>
       </button>
     </a>
   );

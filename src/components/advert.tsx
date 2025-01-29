@@ -19,14 +19,12 @@ export default function Advert({ title }: Props) {
         className="md:w-2/3 hover:cursor-pointer"
         title={title}
       />
-      <a href="/#ad">
-        <button
-          className="flex aspect-rectangle px-8 py-4 bg-kfk-red text-white font-semibold hover:bg-zinc-950 shadow min-w-[32px] w-fit rounded-[60px]"
-          onClick={() => changeView(!view)}
-        >
-          {view ? "Show terms & conditions" : "Go back"}
-        </button>
-      </a>
+      <button
+        className="flex aspect-rectangle px-8 py-4 bg-kfk-red text-white font-semibold hover:bg-zinc-950 shadow min-w-[32px] w-fit rounded-[60px]"
+        onClick={() => changeView(!view)}
+      >
+        {view ? "Show terms & conditions" : "Go back"}
+      </button>
     </div>
   );
 }
