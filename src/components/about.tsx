@@ -14,14 +14,14 @@ export default function About({ telephone, email, address, openOn }: Props) {
       <section className="flex flex-col gap-4 margin">
         <h2 className="flex flex-col gap-y-2 max-w-prose mb-2 ">
           <div>
-            Specialty Cantonese cuisine, hotpot, Korean BBQ, and cooked
-            breakfasts. Completely nut free, plus extensive choice for vegan, veggie,
-            and gluten free diners.
+            From the team behind Reading's top-rated Chinese restaurant,{" "}
+            <a href="https://kungfureading.co.uk/">Kungfu Kitchen</a>.
           </div>
 
           <div>
-            From the team behind Reading's top-rated Chinese restaurant,{" "}
-            <a href="https://kungfureading.co.uk/">Kungfu Kitchen</a>.
+            Specialty Cantonese cuisine, hotpot, Korean BBQ, and cooked
+            breakfasts. Completely nut free, plus extensive choice for vegan,
+            veggie, and gluten free diners.
           </div>
         </h2>
         <GettingHere
