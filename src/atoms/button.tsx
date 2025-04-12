@@ -12,7 +12,6 @@ interface Props {
 export default function Button({
   caption,
   link,
-  style = "rounded",
   absolute,
   full,
 }: Props) {
