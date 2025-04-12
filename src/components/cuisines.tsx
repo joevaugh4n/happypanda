@@ -42,7 +42,7 @@ export default function Cuisine() {
       <Section
         title="Cantonese / dim sum"
         body={`Our head chef is a master of Cantonese cuisine, working in London's
-          China Town since 1985. With forty years' experience, we use secret
+          Chinatown since 1985. With forty years' experience, we use secret
           ingredients and homemade sauces to serve Cantonese dishes that make
           your tastebuds sing.`}
         times="11.30am - 9.30pm"
