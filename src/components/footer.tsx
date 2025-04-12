@@ -12,19 +12,16 @@ export default function Footer({ telephone, email, address }: Props) {
       <div className="flex flex-col">
         <p className="font-normal">© Happy Panda, 2024</p>
         <p>
-          Address:&nbsp;
           <a href="https://maps.app.goo.gl/AxHZRgymPKVHzhLM9" title={address}>
             {address}
           </a>
         </p>
         <p>
-          Tel:{" "}
           <a href={`tel:${telephone}`} title={telephone}>
             {telephone}
           </a>
         </p>
         <p>
-          Email:{" "}
           <a href={`mailto:${email}`} title={email}>
             {email}
           </a>

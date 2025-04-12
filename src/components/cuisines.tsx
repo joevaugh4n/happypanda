@@ -28,7 +28,7 @@ function Section({ title, body, times, booking, menu }: SectionProps) {
         </p>
       </div>
       <div className="flex gap-2">
-        <Button caption="Menu" link={menu === "cafe" ? cafe : classics} />
+        <Button caption="Menu" link={menu === "cafe" ? classics : cafe} />
         <Button caption="07884 784688" link="tel:07884784688" />
       </div>
     </div>

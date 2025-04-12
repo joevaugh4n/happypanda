@@ -26,15 +26,18 @@ export default function Button({ caption, link, absolute, full }: Props) {
 
   return (
     <a
-      className={`flex rounded-sm aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 shadow min-w-[32px] max-h-8
-      } text-center min-h-[32px] justify-center hover:cursor-pointer hover:no-underline ${
-        absolute && "z-1 top-2 sticky self-end justify-end md:right-16 right-4"
-      } ${full ? "md:w-fit w-full" : "w-fit"}`}
+      className={`inline-flex rounded-sm px-8 py-4 bg-kfk-red hover:bg-zinc-950 shadow
+        text-center justify-center hover:cursor-pointer hover:no-underline h-auto self-start
+        ${
+          absolute &&
+          "z-1 top-2 sticky self-end justify-end md:right-16 right-4"
+        } 
+        ${full ? "md:w-fit w-full" : "w-fit"}`}
       href={link}
       title={caption ? caption : link}
       onClick={handleClick} // Add the click handler here
     >
-      <button className="text-white capitalize flex items-center">
+      <button className="text-white capitalize inline-flex items-center align-self">
         <span className="button-label font-medium">{caption}</span>
       </button>
     </a>
