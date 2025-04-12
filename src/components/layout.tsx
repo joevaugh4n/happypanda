@@ -31,7 +31,7 @@ export default function Layout({
   };
 
   return (
-    <div className="flex flex-col bg-white gap-8 margin">
+    <div className="flex flex-col bg-white gap-8">
       <CookieConsent
         flipButtons
         location="bottom"
@@ -48,6 +48,7 @@ export default function Layout({
       <h1 className="hidden">{title}</h1>
 
       <Header telephone={telephone} />
+
       {status == "open" ? children : <ComingSoon />}
 
       <Footer telephone={telephone} email={email} address={address} />

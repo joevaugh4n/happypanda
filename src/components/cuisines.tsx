@@ -38,7 +38,7 @@ function Section({ title, body, times, booking, menu }: SectionProps) {
 
 export default function Cuisine() {
   return (
-    <div className="grid lg:grid-cols-2 gap-y-12 gap-x-16 py-8">
+    <div className="margin grid lg:grid-cols-2 gap-y-12 gap-x-16 py-8">
       <Section
         title="Cantonese / dim sum"
         body={`Our head chef is a master of Cantonese cuisine, working in London's

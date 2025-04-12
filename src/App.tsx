@@ -49,7 +49,7 @@ function Index() {
           source="The Telegraph"
         />
         <Quote
-          quote="We came for our staff party and had the best time. Wonderful tasty and unique, the hospitality was off the chart. Can not recommend enough, or wait to go back."
+          quote="We came for our staff party and had the best time. Wonderful, tasty and unique, the hospitality was off the charts. Cannot recommend enough or wait to go back."
           author="Tim Hooper (Milk, Reading)"
         />
       </Layout>
