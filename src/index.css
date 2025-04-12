@@ -8,7 +8,7 @@
   }
 
   h2 {
-    @apply md:text-4xl text-3xl text-balance font-medium leading-loose
+    @apply text-3xl text-pretty leading-[1.3] font-medium
   }
 
   h3 {

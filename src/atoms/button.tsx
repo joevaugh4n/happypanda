@@ -4,17 +4,11 @@ import ReactGA from "react-ga4";
 interface Props {
   caption: string;
   link?: string;
-  style?: "rounded" | "half";
   absolute?: boolean;
   full?: boolean;
 }
 
-export default function Button({
-  caption,
-  link,
-  absolute,
-  full,
-}: Props) {
+export default function Button({ caption, link, absolute, full }: Props) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!link) {
       e.preventDefault(); // Prevent navigation if no link is provided
@@ -32,7 +26,7 @@ export default function Button({
 
   return (
     <a
-      className={`flex aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 shadow min-w-[32px] max-h-8
+      className={`flex rounded-sm aspect-rectangle px-8 py-4 bg-kfk-red hover:bg-zinc-950 shadow min-w-[32px] max-h-8
       } text-center min-h-[32px] justify-center hover:cursor-pointer hover:no-underline ${
         absolute && "z-1 top-2 sticky self-end justify-end md:right-16 right-4"
       } ${full ? "md:w-fit w-full" : "w-fit"}`}

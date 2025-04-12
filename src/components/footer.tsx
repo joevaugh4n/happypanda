@@ -9,7 +9,7 @@ interface Props {
 export default function Footer({ telephone, email, address }: Props) {
   return (
     <address className="py-4 grid grid-cols-[2fr_1fr] not-italic border-t-blue border-t-2">
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col">
         <p className="font-normal">© Happy Panda, 2024</p>
         <p>
           Address:&nbsp;
