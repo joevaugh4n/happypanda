@@ -8,7 +8,7 @@ export default function Header({ telephone }: HeaderProps) {
   return (
     <header className="flex justify-between flex-row mt-4">
       <a href="/" title="Happy Panda" className="flex justify-center">
-        <img className="md:w-60 w-2/3" src={logo} alt="Logo" />
+        <img className="md:w-60 w-3/4" src={logo} alt="Logo" />
       </a>
       <div className="md:block hidden">
         <Button caption="07884 784688" link={`tel:${telephone}`} />
