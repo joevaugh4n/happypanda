@@ -1,5 +1,6 @@
 {
   "name": "panda-cafe-react",
+  "homepage": "https://joevaugh4n.github.io/happypanda",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -31,6 +32,7 @@
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
     "@storybook/test": "^8.6.12",
+    "@types/node": "^22.14.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",

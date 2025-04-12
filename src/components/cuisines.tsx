@@ -1,4 +1,6 @@
 import Button from "../atoms/button";
+import cafe from "/menus/cafe.pdf";
+import classics from "/menus/classics.pdf";
 
 interface SectionProps {
   title: string;
@@ -6,7 +8,7 @@ interface SectionProps {
   body: string;
   times: string;
   booking?: boolean;
-  menu: string;
+  menu: "classics" | "cafe";
 }
 
 function Section({ title, body, times, booking, menu }: SectionProps) {
@@ -26,12 +28,8 @@ function Section({ title, body, times, booking, menu }: SectionProps) {
         </p>
       </div>
       <div className="flex gap-2">
-        <a href={menu ? `menu/${menu}` : "/"}>
-          <Button caption="Menu" />
-        </a>
-        <a href="tel:07884784688">
-          <Button caption="07884 784688" />
-        </a>
+        <Button caption="Menu" link={menu === "cafe" ? cafe : classics} />
+        <Button caption="07884 784688" link="tel:07884784688" />
       </div>
     </div>
   );
@@ -47,7 +45,7 @@ export default function Cuisine() {
           ingredients and homemade sauces to serve Cantonese dishes that make
           your tastebuds sing.`}
         times="11.30am - 9.30pm"
-        menu="classics"
+        menu="cafe"
       />
 
       <Section
@@ -59,7 +57,7 @@ export default function Cuisine() {
           delicious, interactive, and full of laughter.`}
         times="1pm - 8.30pm"
         booking
-        menu="classics"
+        menu="cafe"
       />
 
       <Section
@@ -68,7 +66,7 @@ export default function Cuisine() {
           handmade Parmentier potatoes, eggs Benedict, French toast, and
           pancakes. Choose from vegetarian, vegan, and gluten-free options.`}
         times="9am - 12pm"
-        menu="cafe"
+        menu="classics"
       />
     </div>
   );
