@@ -6,11 +6,13 @@ interface HeaderProps {
 }
 export default function Header({ telephone }: HeaderProps) {
   return (
-    <header className="flex justify-between mt-4">
-      <a href="/" title="Happy Panda">
-        <img className="w-60" src={logo} alt="Logo" />
+    <header className="flex justify-between flex-row mt-4">
+      <a href="/" title="Happy Panda" className="flex justify-center">
+        <img className="md:w-60 w-1/2" src={logo} alt="Logo" />
       </a>
-      <Button caption="07884 784688" link={`tel:${telephone}`} />
+      <div className="md:block hidden">
+        <Button caption="07884 784688" link={`tel:${telephone}`} />
+      </div>
     </header>
   );
 }
