@@ -12,10 +12,11 @@ export default function About({ telephone, email, address, openOn }: Props) {
   return (
     <section className="flex flex-col gap-x-8 gap-y-4 px-4 py-8 bg-blue border border-slate-100">
       <section className="flex flex-col gap-4">
-        <h2 className="flex flex-col gap-y-2 max-w-prose mb-2">
+        <h2 className="flex flex-col gap-y-2 max-w-prose mb-2 ">
           <div>
             Specialty Cantonese cuisine, hotpot, Korean BBQ, and cooked
-            breakfasts. Completely nut free.
+            breakfasts. Completely nut free, plus extensive choice for vegan, veggie,
+            and gluten free diners.
           </div>
 
           <div>

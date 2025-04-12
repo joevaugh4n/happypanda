@@ -62,7 +62,7 @@ export default function Cuisine() {
       />
 
       <Section
-        title="Cooked breakfast"
+        title="Brunch"
         body={`Fresh and delicious breakfasts using only the finest ingredients, with
           handmade Parmentier potatoes, eggs Benedict, French toast, and
           pancakes. Choose from vegetarian, vegan, and gluten-free options.`}

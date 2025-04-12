@@ -59,7 +59,7 @@ export default function GettingHere({
             className="text-kfk-red hover:underline"
             title={email}
           >
-            email
+            Email
           </a>
         </ListItem>
       </ul>

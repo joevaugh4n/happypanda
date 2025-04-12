@@ -8,7 +8,7 @@
   }
 
   h2 {
-    @apply text-3xl text-pretty leading-[1.3] font-medium
+    @apply text-2xl text-pretty leading-[1.3] font-medium
   }
 
   h3 {
