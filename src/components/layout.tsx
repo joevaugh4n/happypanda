@@ -3,7 +3,6 @@ import ComingSoon from "./comingsoon";
 import ReactGA from "react-ga4";
 import CookieConsent from "react-cookie-consent";
 import Header from "../components/header";
-import Button from "../atoms/button";
 import Footer from "./footer";
 
 interface Props {
@@ -11,7 +10,6 @@ interface Props {
   status?: "open" | "closed";
   title: string;
   telephone: string;
-  logoSize: "large" | "small";
   email: string;
   address: string;
 }
@@ -21,7 +19,6 @@ export default function Layout({
   status = "open",
   title,
   telephone,
-  logoSize,
   email,
   address,
 }: Props) {
@@ -49,9 +46,10 @@ export default function Layout({
         🐼 We use (fortune) cookies to enhance our user experience.
       </CookieConsent>
       <h1 className="hidden">{title}</h1>
-      <Button absolute caption="Call Happy Panda" link={`tel:${telephone}`} />
-      <Header logoSize={logoSize} />
+
+      <Header telephone={telephone} />
       {status == "open" ? children : <ComingSoon />}
+
       <Footer telephone={telephone} email={email} address={address} />
     </div>
   );

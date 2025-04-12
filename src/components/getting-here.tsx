@@ -17,7 +17,7 @@ export default function GettingHere({
 }: Props) {
   return (
     <section>
-      <ul className="flex-col flex gap-4 justify-start">
+      <ul className="flex-col flex justify-start">
         <ListItem icon={<FaDirections />}>
           <a
             href="https://maps.app.goo.gl/AxHZRgymPKVHzhLM9"
@@ -28,7 +28,8 @@ export default function GettingHere({
           </a>
         </ListItem>
         <ListItem icon={<FaClock />}>
-          <div className="mb-2 font-bold">{openOn}</div>
+          <div>{openOn}, 9am - 9.30pm</div>
+          {/**
           <ul className="flex flex-col text-balance gap-1">
             <li className="text-balance">
               9am - 12pm:&nbsp;Chinese and English breakfasts
@@ -42,9 +43,9 @@ export default function GettingHere({
               lunch with prebooking)
             </li>
           </ul>
+          */}
         </ListItem>
         <ListItem icon={<FaPhone />}>
-          Book now at&nbsp;
           <a
             title={telephone}
             href={`tel:${telephone}`}

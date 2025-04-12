@@ -1,27 +1,16 @@
+import Button from "../atoms/button";
 import logo from "/assets/logo.webp";
 
-interface Props {
-  logoSize: "large" | "small";
+interface HeaderProps {
+  telephone: string;
 }
-
-/** Header component. Contains the KFK logo and the CTA button, top right. */
-export default function Header({ logoSize }: Props) {
+export default function Header({ telephone }: HeaderProps) {
   return (
-    <>
-      <div className="flex md:flex-row flex-col-reverse justify-between md:items-start">
-        <a
-          href="/"
-          className={
-            logoSize == "large"
-              ? `md:w-2/5 md:h-auto inline-block h-auto self-center`
-              : "w-52"
-          }
-          title="Happy Panda"
-        >
-          <img className="lg:mx-0 mx-auto" src={logo} alt="Logo" />
-        </a>
-        <div className="md:mb-0 mb-2"></div>
-      </div>
-    </>
+    <header className="flex justify-between mt-4">
+      <a href="/" title="Happy Panda">
+        <img className="w-60" src={logo} alt="Logo" />
+      </a>
+      <Button caption="07884 784688" link={`tel:${telephone}`} />
+    </header>
   );
 }

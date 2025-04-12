@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: "Rethink Sans",
+        sans: "Roboto Condensed",
       },
       backgroundImage: {
         "header-bg": "url('/assets/strawberries.webp')",

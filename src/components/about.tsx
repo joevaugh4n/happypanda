@@ -1,5 +1,4 @@
 import GettingHere from "./getting-here";
-import Link from "../atoms/link";
 
 interface Props {
   telephone: string;
@@ -12,14 +11,12 @@ interface Props {
 export default function About({ telephone, email, address, openOn }: Props) {
   return (
     <section className="flex flex-col gap-x-8 gap-y-4 px-4 py-8 bg-blue border border-slate-100">
-      <section className="flex flex-col gap-4 mx-auto margin">
-        <h2 className="hidden">Welcome to Happy Panda</h2>
-        <p className="text-pretty text-lg">
-          Delicious Cantonese cuisine and dim sum, hot pot, barbecue, and
-          Chinese and English breakfasts from the team behind&nbsp;
-          <Link caption="Kungfu Kitchen" target="https://kungfureading.co.uk" />
-          .
-        </p>
+      <section className="flex flex-col gap-4">
+        <h2>
+          Specialty Cantonese cuisine, hotpot, Korean BBQ, and cooked
+          breakfasts. Completely nut free. From the team behind Reading's top-rated Chinese
+          restaurant, <a href="https://kungfureading.co.uk/">Kungfu Kitchen</a>.
+        </h2>
         <GettingHere
           openOn={openOn}
           address={address}

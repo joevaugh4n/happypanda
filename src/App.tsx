@@ -1,9 +1,8 @@
 import "./index.css";
 import About from "./components/about";
-import Advert from "./components/advert";
+import Cuisine from "./components/cuisines";
 import Gallery from "./components/gallery";
 import Layout from "./components/layout";
-import Menus from "./components/Menus";
 import Notice from "./components/notice";
 import Picture from "./atoms/image";
 import Quote from "./components/quote";
@@ -22,32 +21,33 @@ function Index() {
   return (
     <>
       <Layout
-        logoSize="large"
         telephone={telephone}
-        title="Happy Panda"
+        title="Kungfu Cantonese"
         email={email}
         address={address}
       >
         <Notice />
         <About
-          openOn="Open every day but Tuesday"
+          openOn="Open everyday but Tuesday"
           telephone={telephone}
           email={email}
           address={address}
         />
-        <Advert title="Spring festival" />
+        <Cuisine />
         <Gallery>
-          <Picture title="Breakfast at Happy Panda" src={strawberries} />
-          <Picture title="Dumplings at Happy Panda" src={cake} />
-          <Picture title="Vegan mock beef at Happy Panda" src={mockbeef} />
-          <Picture title="A meat and crab dish at Happy Panda" src={meat} />
+          <Picture title="Breakfast at Kungfu Cantonese" src={strawberries} />
+          <Picture title="Dumplings at Kungfu Cantonese" src={cake} />
+          <Picture title="Vegan mock beef at Kungfu Cantonese" src={mockbeef} />
+          <Picture
+            title="A meat and crab dish at Kungfu Cantonese"
+            src={meat}
+          />
         </Gallery>
         <Quote
           quote="But look closer, and you’ll find this is no run-of-the-mill regional takeaway. Not so much lemon chicken as stir-fried lamb’s tripe with coriander and Dongpo-style pig shoulder."
           author="Tom Parker Bowles"
           source="The Telegraph"
         />
-        <Menus title />
       </Layout>
     </>
   );
@@ -55,28 +55,15 @@ function Index() {
 
 function MenusPage() {
   return (
-    <Layout
-      title="Menus"
-      logoSize="small"
-      telephone={telephone}
-      email={email}
-      address={address}
-    >
+    <Layout title="Menus" telephone={telephone} email={email} address={address}>
       <h1 className="text-black">Menus</h1>
-      <Menus />
     </Layout>
   );
 }
 
 function NotFound() {
   return (
-    <Layout
-      title="Menus"
-      logoSize="small"
-      telephone={telephone}
-      email={email}
-      address={address}
-    >
+    <Layout title="Menus" telephone={telephone} email={email} address={address}>
       <h1 className="text-black">Page not found</h1>
       <a href="/">Return to homepage</a>
     </Layout>
