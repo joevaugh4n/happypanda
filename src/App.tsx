@@ -35,13 +35,13 @@ function Index() {
         />
         <Cuisine />
         <Gallery>
-          <Picture title="Breakfast at Kungfu Cantonese" src={strawberries} />
           <Picture title="Dumplings at Kungfu Cantonese" src={cake} />
           <Picture title="Vegan mock beef at Kungfu Cantonese" src={mockbeef} />
           <Picture
             title="A meat and crab dish at Kungfu Cantonese"
             src={meat}
           />
+          <Picture title="Breakfast at Kungfu Cantonese" src={strawberries} />
         </Gallery>
         <Quote
           quote="But look closer, and you’ll find this is no run-of-the-mill regional takeaway. Not so much lemon chicken as stir-fried lamb’s tripe with coriander and Dongpo-style pig shoulder."

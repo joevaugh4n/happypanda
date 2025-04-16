@@ -14,8 +14,8 @@ interface SectionProps {
 
 function Section({ title, body, times, booking, menu }: SectionProps) {
   return (
-    <div>
-      <div className="mb-4">
+    <div className='md:mx-auto'>
+      <div className="mb-4 max-w-prose">
         <h2 className="mb-2">{title ? title : "No title"}</h2>
         <p className="opacity-50">{times ? times : "No times"}</p>
         <p>{body ? body : "No text"}</p>
