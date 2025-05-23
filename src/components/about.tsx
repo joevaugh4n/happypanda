@@ -19,8 +19,7 @@ export default function About({ telephone, email, address, openOn }: Props) {
           </div>
 
           <div>
-            Specialty Cantonese cuisine, hotpot, Korean BBQ, and cooked
-            breakfasts. Completely nut free, plus extensive vegan,
+            Specialty Cantonese cuisine, hotpot, and Korean BBQ. Completely nut free, plus extensive vegan,
             veggie, and gluten free options.
           </div>
         </h2>

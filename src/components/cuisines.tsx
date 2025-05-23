@@ -10,12 +10,13 @@ interface SectionProps {
   booking?: boolean;
   /** Choose classics for breakfast, cafe for everything else.*/
   menu: "classics" | "cafe";
+  hidden?: boolean;
 }
 
-function Section({ title, body, times, booking, menu }: SectionProps) {
+function Section({ title, body, times, booking, menu, hidden }: SectionProps) {
   return (
-    <div className='md:mx-auto'>
-      <div className="mb-4 max-w-prose">
+    <div className={`md:mx-auto ${hidden && 'hidden'}`}>
+      <div className="mb-4 lg:max-w-prose">
         <h2 className="mb-2">{title ? title : "No title"}</h2>
         <p className="opacity-50">{times ? times : "No times"}</p>
         <p>{body ? body : "No text"}</p>
@@ -50,6 +51,16 @@ export default function Cuisine() {
       />
 
       <Section
+        title="Brunch"
+        body={`Fresh and delicious breakfasts using only the finest ingredients, with
+          handmade Parmentier potatoes, eggs Benedict, French toast, and
+          pancakes. Choose from vegetarian, vegan, and gluten-free options.`}
+        times="9am - 12pm"
+        menu="classics"
+        hidden
+      />
+
+      <Section
         title="Korean BBQ / hotpot"
         placement="left"
         body={`There’s something magical about gathering around a bubbling hot pot or
@@ -61,14 +72,7 @@ export default function Cuisine() {
         menu="cafe"
       />
 
-      <Section
-        title="Brunch"
-        body={`Fresh and delicious breakfasts using only the finest ingredients, with
-          handmade Parmentier potatoes, eggs Benedict, French toast, and
-          pancakes. Choose from vegetarian, vegan, and gluten-free options.`}
-        times="9am - 12pm"
-        menu="classics"
-      />
+
     </div>
   );
 }

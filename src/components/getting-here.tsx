@@ -59,7 +59,7 @@ export default function GettingHere({
             className="text-kfk-red hover:underline"
             title={email}
           >
-            Email
+            info@happypandareading.co.uk
           </a>
         </ListItem>
       </ul>
